@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <mysql.version>8.0.22</mysql.version>
     </properties>
 
     <dependencies>
@@ -27,7 +28,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -39,6 +39,20 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--        //Maven Data JPA + MySQL Connector-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <!--            <version>2.4.1</version>-->
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!--        //End Maven Data JPA + MySQL Connector-->
+
     </dependencies>
 
     <build>
