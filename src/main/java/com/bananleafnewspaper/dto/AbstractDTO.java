@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class AbstractDTO<T> {
+public abstract class AbstractDTO<T> {
 
     private Long id;
     private String createdBy;

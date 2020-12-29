@@ -53,4 +53,12 @@ public class NewsEntity extends BaseEntity {
     public void setContent(String content) {
         this.content = content;
     }
+
+    public CategoryEntity getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryEntity category) {
+        this.category = category;
+    }
 }
