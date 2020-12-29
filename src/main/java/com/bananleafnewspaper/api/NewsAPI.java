@@ -14,13 +14,13 @@ public class NewsAPI {
     }
 
     @PutMapping(value = "/news")
-    public NewsDTO updateNews(@RequestBody NewsDTO model){
+    public NewsDTO updateNews(@RequestBody NewsDTO model) {
         return model;
     }
 
     @DeleteMapping(value = "/news")
-    public String deleteNews(@RequestBody int[] ids){
+    public String deleteNews(@RequestBody int[] ids) {
         //
-        return  "DELETE";
+        return "DELETE";
     }
 }

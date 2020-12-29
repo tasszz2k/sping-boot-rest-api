@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeAPI {
 
     @GetMapping("/api/test")
-    public ResponseEntity<String> testSpringBoot(){
+    public ResponseEntity<String> testSpringBoot() {
         return ResponseEntity.ok("Success");
     }
 }

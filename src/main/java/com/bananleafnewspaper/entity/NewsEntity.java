@@ -1,8 +1,6 @@
 package com.bananleafnewspaper.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "news")
@@ -19,6 +17,10 @@ public class NewsEntity extends BaseEntity {
 
     @Column
     private String content;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity category;
 
     public String getTitle() {
         return title;
