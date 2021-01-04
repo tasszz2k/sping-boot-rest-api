@@ -1,17 +1,20 @@
 package com.bananleafnewspaper.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "role")
-public class RoleEntity extends BaseEntity{
+public class RoleEntity extends BaseEntity {
     @Column
     private String code;
 
     @Column
     private String name;
+
+    @OneToMany(mappedBy = "role")
+    private List<UserEntity> users = new ArrayList<>();
 
     public String getCode() {
         return code;
@@ -27,5 +30,13 @@ public class RoleEntity extends BaseEntity{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<UserEntity> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<UserEntity> users) {
+        this.users = users;
     }
 }
